@@ -1,10 +1,12 @@
-package com.example.helloworld;
+package id.ac.ui.cs.mobileprogramming.activityplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import id.ac.ui.cs.mobileprogramming.activityplanner.R;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 

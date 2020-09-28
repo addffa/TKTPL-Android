@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package id.ac.ui.cs.mobileprogramming.activityplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import id.ac.ui.cs.mobileprogramming.activityplanner.R;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "MESSAGE";
