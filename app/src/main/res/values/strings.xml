@@ -2,4 +2,7 @@
     <string name="app_name">Activity Planner</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="button_scan">Scan Wifi</string>
+    <string name="text_title">List of Wifi Detected:</string>
+    <string name="button_post">Post Data</string>
 </resources>
