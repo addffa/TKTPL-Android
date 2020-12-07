@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import id.ac.ui.cs.mobileprogramming.activityplanner.R;
 
@@ -21,8 +23,16 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        String numStr = editText.getText().toString();
+        int number = Integer.parseInt(numStr);
+        boolean isPrime = isPrime(number);
+        intent.putExtra(EXTRA_MESSAGE, isPrime);
         startActivity(intent);
+    }
+
+    public native boolean isPrime(int number);
+
+    static {
+        System.loadLibrary("native-lib");
     }
 }
