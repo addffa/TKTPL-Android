@@ -15,11 +15,15 @@ public class DisplayMessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
 
-        // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        boolean isPrime = intent.getBooleanExtra(MainActivity.EXTRA_MESSAGE, false);
 
-        // Capture the layout's TextView and set the string as its text
+        String message;
+        if (isPrime) {
+            message = "Prime number";
+        } else {
+            message = "Not Prime number";
+        }
         TextView textView = findViewById(R.id.textView);
         textView.setText(message);
     }
